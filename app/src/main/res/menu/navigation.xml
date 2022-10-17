@@ -13,8 +13,8 @@
         />
 
     <item
-        android:id="@+id/shot"
-        android:icon="@drawable/shut"
-        android:title="shot"
+        android:id="@+id/carts"
+        android:icon="@drawable/carrito"
+        android:title="carts"
         />
 </menu>
