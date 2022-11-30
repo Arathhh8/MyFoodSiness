@@ -1,19 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfileFragment"
+    android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@drawable/img_1">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_marginTop="40dp"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pharmacy_logo"
+            app:civ_border_color="#3f51b5"
+            app:civ_border_width="4dp"
+            app:civ_shadow="false"
+            app:civ_shadow_radius="10dp"
+            app:civ_shadow_color="#3f51b5"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trabajamos por tu salud"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:paddingLeft="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/insta"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_weight="0.25"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:paddingLeft="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/fbb"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_weight="0.25"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:paddingEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/whats_icono"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_weight="0.25"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:paddingEnd="50dp"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/maps"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_weight="0.25"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
         android:orientation="vertical">
 
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo elect: farmaciadgarcia@gmail.com"/>
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dirección: 26 Av San Juanito Itzícuaro"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teléfono: 4433877203"/>
 
 
     </LinearLayout>
 
-</FrameLayout>
+
+
+
+</LinearLayout>
