@@ -22,9 +22,6 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private var layoutManager : RecyclerView.LayoutManager? = null
-    private lateinit var adapter: NewsAdapter
-    val newsList = ArrayList<News>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +29,6 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
-        createData()
-        newsList.add(News(8, R.drawable.arizona,"Arizona","Frutas, Mango...","$20"))
-
-
     }
 
     override fun onCreateView(
@@ -49,11 +41,6 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
-        layoutManager = LinearLayoutManager(view.context,LinearLayoutManager.VERTICAL,false)
-        recyclerView.layoutManager = layoutManager
-        adapter = NewsAdapter(newsList)
-        recyclerView.adapter = adapter
 
     }
 
@@ -76,18 +63,4 @@ class HomeFragment : Fragment() {
                 }
             }*/
     }
-
-    private fun createData(){
-        newsList.add(News(1, R.drawable.tacos,"Tacos","Deliciosos tacos 100% mexicanos","$13"))
-        newsList.add(News(2, R.drawable.quesadillas,"Quesadillas","Con mucho queso","$ 22"))
-        newsList.add(News(3, R.drawable.sincronizadas,"Sincronizadas","No pueden faltar","$30"))
-        newsList.add(News(4, R.drawable.hotdog,"Hot Dogs","No pueden faltar","$18"))
-        newsList.add(News(5, R.drawable.burguer,"Hamburguesas","No pueden faltar","$42"))
-        newsList.add(News(6, R.drawable.papas_francesa,"Orden de papas","Crujientes","$27"))
-        newsList.add(News(7, R.drawable.volcan,"Volcanes","Chorizo, combinados...","$15"))
-        newsList.add(News(8, R.drawable.refrescos,"Refrescos","Fanta, sprite, sidral","$15"))
-        newsList.add(News(9, R.drawable.arizona,"Arizona","Frutas, Mango...","$20"))
-    }
-
-
 }

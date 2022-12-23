@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                     ChangeFragment(profileFragment)
                     return@setOnItemSelectedListener true
                 }
-                R.id.carts->{
+                R.id.status->{
                     toolbar.title = "Shot"
                     val shotFragment = ShotFragment.newInstance()
                     ChangeFragment(shotFragment)
